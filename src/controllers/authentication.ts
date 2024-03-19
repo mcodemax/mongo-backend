@@ -32,7 +32,7 @@ export const login = async (req: express.Request, res: express.Response) => {
 
     await user.save();
 
-    res.cookie('MAX-AUTH', user.authentication.sessionToken, {
+    res.cookie('MAX-AUTH-PT-APP', user.authentication.sessionToken, {
       domain: 'localhost',
       path: '/',
     });
